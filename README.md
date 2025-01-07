@@ -31,7 +31,7 @@ This lab will create file shares with various permissions, test access to the sh
   - `no-access`
   - `accounting` (skip permissions for this folder for now)
  
-![Create Permissions Folders](images/netPrem-1.png)
+![Create Permissions Folders](images/netPerm-1.png)
 
 ---
 
@@ -43,6 +43,10 @@ This lab will create file shares with various permissions, test access to the sh
     - **Group**: `Domain Users`
     - **Permission**: `Read`
 
+![Create Read Permissions](images/netPerm-2.png)
+
+![Read Access Denied](images/netPerm-3.png)
+
   - **Folder**: `write-access`
     - **Group**: `Domain Users`
     - **Permission**: `Read/Write`
@@ -50,6 +54,8 @@ This lab will create file shares with various permissions, test access to the sh
   - **Folder**: `no-access`
     - **Group**: `Domain Admins`
     - **Permission**: `Read/Write`
+   
+![No Access Folder Denied](images/netPerm-3.png)
 
   - **Folder**: `accounting` (skip for now)
 
@@ -70,6 +76,8 @@ This lab will create file shares with various permissions, test access to the sh
 - On **DC-1**, open **Active Directory Users and Computers** (ADUC).
 - Create a new security group called **ACCOUNTANTS**.
 
+![Create Accounting Folder](images/netPerm-5.png)
+
 ---
 
 ## 7. Assign Permissions to the "Accounting" Folder
@@ -79,6 +87,8 @@ This lab will create file shares with various permissions, test access to the sh
   - **Folder**: `accounting`
   - **Group**: `ACCOUNTANTS`
   - **Permission**: `Read/Write`
+ 
+![Assign Accounting Folder Access](images/netPerm-6.png)
 
 ---
 
@@ -93,6 +103,8 @@ This lab will create file shares with various permissions, test access to the sh
 
 - On **DC-1**, add `<someuser>` to the **ACCOUNTANTS** security group.
 
+![Add User Accounting Folder](images/netPerm-7.png)
+
 ---
 
 ## 10. Re-login to Client-1 and Test Access
@@ -101,4 +113,6 @@ This lab will create file shares with various permissions, test access to the sh
 - Log back in as `<someuser>`.
 - Attempt to access the **accounting** folder again via `\\DC-1\accounting`.
   - **Expected Result**: Access should now be granted, as the user is a member of the **ACCOUNTANTS** security group.
+ 
+![Comfirm User Accounting Folder Access](images/netPerm-8.png)
 
