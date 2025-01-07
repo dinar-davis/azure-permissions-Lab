@@ -1,6 +1,6 @@
 ![Azure_Logo](images/azure_security_logo.png)
 
-# Lab Instructions: Configuring File Shares and Permissions in Active Directory
+# Configuring File Shares and Permissions in Active Directory
 
 ## Objective:
 This lab will create file shares with various permissions, test access to the shares as a normal user, and use Active Directory groups to control access to specific resources.
