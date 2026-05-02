@@ -2,7 +2,33 @@
 
 # Configuring File Shares and Permissions in Active Directory
 
-## Objective:
+Configured and tested **file share permissions** in an Active Directory environment to simulate real-world user access scenarios. This lab demonstrates how group-based permissions control access to shared resources and how to troubleshoot access issues.
+
+## Key Skills Demonstrated
+
+- Active Directory user and group management
+- File share and NTFS permissions
+- Access control using security groups
+- Troubleshooting user access issues
+- Understanding permission inheritance and group membership
+
+## What I Did
+
+- Created multiple shared folders with different permission levels including read, write, and restricted access
+- Assigned permissions using Active Directory groups including Domain Users and custom security groups
+- Tested access from a client machine using a standard user account
+- Diagnosed and verified access behavior based on group membership
+- Created a custom security group called **ACCOUNTANTS** to control access to restricted resources
+- Updated group membership and validated access changes after user reauthentication
+
+## Key Takeaways
+
+- Group-based permissions are more scalable than assigning permissions directly to users
+- Access issues often require verifying both share and NTFS permissions
+- Changes to group membership require re-login to take effect
+- Proper permission structure reduces support overhead and access errors
+
+## Objective
 This lab will create file shares with various permissions, test access to the shares as a normal user, and use Active Directory groups to control access to specific resources.
 
 ---
